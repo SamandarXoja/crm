@@ -1,4 +1,6 @@
-import { Navigate, Outlet, Route, Routes, useNavigate } from "react-router";
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
+import {Route, Routes,} from "react-router";
 import StatusUser from "./pages/status-user";
 import Sidebar from "./sidebar";
 import Home from "./pages/Home";
@@ -8,7 +10,7 @@ import Manager from "./pages/manager";
 import Reports from "./pages/reports";
 
 function App() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
 
 

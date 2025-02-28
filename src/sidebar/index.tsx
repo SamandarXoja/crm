@@ -5,16 +5,12 @@ import {
   File,
 
 } from "lucide-react";
-import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { NavLink, useNavigate } from "react-router";
+
+import { NavLink, } from "react-router";
 
 function Sidebar() {
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedNodeId, setSelectedNodeId] = useState(null);
+
   return (
     <>
       <div className="w-[300px] flex flex-col justify-between bg-[#212a33] min-h-screen pt-3">
@@ -33,9 +29,9 @@ function Sidebar() {
           <div className="mt-[40px] ml-[10px] pl-[10px] pr-[20px]">
             <NavLink
               to="/"
-              onClick={() => setSelectedNodeId(null)} // Reset selected node when "Spravochnik" is clicked
+
               className={({ isActive }) =>
-                `text-[#9A9CAE] flex items-center text-[18px] cursor-pointer max-w-[230px] ${isActive || selectedNodeId === "spravochnik"
+                `text-[#9A9CAE] flex items-center text-[18px] cursor-pointer max-w-[230px] ${isActive
                   ? "bg-blue-500 flex gap-2 text-white rounded-md px-2 py-1"
                   : "px-2 py-1 flex gap-2"
                 }`

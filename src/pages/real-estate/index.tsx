@@ -1,4 +1,4 @@
-function RealEstate(){
+function RealEstate() {
     return (
         <div>
             RealEstate

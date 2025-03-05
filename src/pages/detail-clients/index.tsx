@@ -34,11 +34,14 @@ const DetailClient = () => {
             return
         }
 
-        setInputCount([...inputCount, 1])
+        setInputCount([...inputCount, Date.now()])
 
 
     }
 
+    function deleteInput(id: number) {
+        setInputCount(inputCount.filter((inputId) => inputId !== id));
+    }
 
 
 
@@ -95,22 +98,50 @@ const DetailClient = () => {
                                 </Select>
                             </div>
 
-                            <div className='max-w-[320px]   w-full relative'>
-                                <label>контакты</label>
-                                {inputCount.map((_, i) => (
-                                    <div className='flex max-w-[320px] w-full mb-2' key={i}>
-                                        <div className='max-w-[320px] w-full'>
-                                            <Input className='max-w-[320px] w-full' />
-                                            <button onClick={() => createInput()} className='absolute right-[-19px] top-[25px] text-2xl text-slate-500'>+</button>
+
+                            <div className='max-w-[320px] w-full'>
+                                <label>Паспорт серия</label>
+                                <Input className='max-w-[320px] w-full' />
+                            </div>
+                            <div className='max-w-[320px] w-full'>
+                                <label>Паспорт номер</label>
+                                <Input className='max-w-[320px] w-full' />
+                            </div>
+                            <div className='max-w-[320px] w-full'>
+                                {inputCount.map((id, i) => (
+                                    <div className='max-w-[320px]   w-full relative' key={id}>
+                                        <label>контакты</label>
+                                        <div className='flex max-w-[320px] w-full mb-2' >
+                                            <div className='max-w-[320px] w-full'>
+
+
+                                                <Input className='max-w-[320px] w-full' />
+
+
+                                                {i === 0 && (
+
+                                                    <button onClick={() => createInput()} className='absolute right-[-19px] top-[25px] text-2xl text-slate-500'>+</button>
+                                                )
+
+                                                }
+
+                                                {i > 0 && (
+
+                                                    <button onClick={() => deleteInput(id)} className='absolute right-[-19px] top-[25px] text-slate-500'>Х</button>
+                                                )
+
+                                                }
+
+
+                                            </div>
                                         </div>
+
+
                                     </div>
                                 ))}
-
-
-
-
-
                             </div>
+
+
                         </div>
 
 

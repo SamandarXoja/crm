@@ -1,4 +1,5 @@
 
+import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useState } from 'react';
@@ -56,7 +57,10 @@ const DetailClient = () => {
 
                 </div>
 
-                <Link to={'/'} className='bg-red-600 max-w-[100px] w-full block py-1 text-center rounded-md text-white'>Назад</Link>
+                <div className='flex gap-3'>
+                    <Button className='bg-green-500 text-white'>Сохранить</Button>
+                    <Link to={'/'} className='bg-red-600 w-[100px]  block py-1 text-center rounded-md text-white'>Назад</Link>
+                </div>
             </div>
 
             <div className='flex gap-5 pr-2'>
@@ -114,6 +118,12 @@ const DetailClient = () => {
                                 ))}
                             </div>
 
+                            <div className='max-w-[500px] w-full'>
+                                <label>Почта</label>
+                                <Input className='max-w-[320px] w-full' />
+                            </div>
+
+
                             <div className='max-w-[320px] w-full'>
                                 <label>ПНФЛ</label>
                                 <Input className='max-w-[320px] w-full' />
@@ -129,16 +139,16 @@ const DetailClient = () => {
                                 <label>Паспорт номер</label>
                                 <Input className='max-w-[320px] w-full' />
                             </div>
-                            <div className='max-w-[320px] w-full'>
+                            <div className='max-w-[1000px] w-full'>
                                 <label>Кем выдан паспорт </label>
-                                <Input className='max-w-[320px] w-full' />
+                                <Input className='max-w-[1000px] w-full' />
                             </div>
                             <div className='max-w-[320px] w-full'>
                                 <label>Когда выдан паспорт </label>
                                 <Input className='max-w-[320px] w-full' />
                             </div>
 
-                        
+
 
 
 
@@ -155,8 +165,15 @@ const DetailClient = () => {
                                 </Select>
                             </div>
 
+                            <div className='max-w-[320px] w-full flex items-end'>
+                                <Button className='border'>Документы</Button>
+                            </div>
+
+
+
+
                         </div>
-                        
+
                         <div className='mt-4'>
                             <label>Прописка</label>
                             <Input />

@@ -97,7 +97,7 @@ const DetailClient = () => {
 
                             <div className='max-w-[320px]   w-full relative'>
                                 <label>контакты</label>
-                                {inputCount.map((item, i) => (
+                                {inputCount.map((_, i) => (
                                     <div className='flex max-w-[320px] w-full mb-2' key={i}>
                                         <div className='max-w-[320px] w-full'>
                                             <Input className='max-w-[320px] w-full' />

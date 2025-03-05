@@ -81,33 +81,6 @@ const DetailClient = () => {
                             </div>
 
                             <div className='max-w-[320px] w-full'>
-                                <label>ПНФЛ</label>
-                                <Input className='max-w-[320px] w-full' />
-                            </div>
-                            <div className='max-w-[320px] w-full'>
-                                <label>Женат</label>
-                                <Select>
-                                    <SelectTrigger className="w-[320px]">
-                                        <SelectValue placeholder="выбор" />
-                                    </SelectTrigger>
-                                    <SelectContent className='bg-white'>
-                                        <SelectItem value="да">да</SelectItem>
-                                        <SelectItem value="нет">нет</SelectItem>
-
-                                    </SelectContent>
-                                </Select>
-                            </div>
-
-
-                            <div className='max-w-[320px] w-full'>
-                                <label>Паспорт серия</label>
-                                <Input className='max-w-[320px] w-full' />
-                            </div>
-                            <div className='max-w-[320px] w-full'>
-                                <label>Паспорт номер</label>
-                                <Input className='max-w-[320px] w-full' />
-                            </div>
-                            <div className='max-w-[320px] w-full'>
                                 {inputCount.map((id, i) => (
                                     <div className='max-w-[320px]   w-full relative' key={id}>
                                         <label>контакты</label>
@@ -141,9 +114,53 @@ const DetailClient = () => {
                                 ))}
                             </div>
 
+                            <div className='max-w-[320px] w-full'>
+                                <label>ПНФЛ</label>
+                                <Input className='max-w-[320px] w-full' />
+                            </div>
+
+
+
+                            <div className='max-w-[320px] w-full'>
+                                <label>Паспорт серия</label>
+                                <Input className='max-w-[320px] w-full' />
+                            </div>
+                            <div className='max-w-[320px] w-full'>
+                                <label>Паспорт номер</label>
+                                <Input className='max-w-[320px] w-full' />
+                            </div>
+                            <div className='max-w-[320px] w-full'>
+                                <label>Кем выдан паспорт </label>
+                                <Input className='max-w-[320px] w-full' />
+                            </div>
+                            <div className='max-w-[320px] w-full'>
+                                <label>Когда выдан паспорт </label>
+                                <Input className='max-w-[320px] w-full' />
+                            </div>
+
+                        
+
+
+
+                            <div className='max-w-[320px] w-full'>
+                                <label>Женат / Замужам</label>
+                                <Select>
+                                    <SelectTrigger className="w-[320px]">
+                                        <SelectValue placeholder="выбор" />
+                                    </SelectTrigger>
+                                    <SelectContent className='bg-white'>
+                                        <SelectItem value="да">да</SelectItem>
+                                        <SelectItem value="нет">нет</SelectItem>
+                                    </SelectContent>
+                                </Select>
+                            </div>
 
                         </div>
-
+                        
+                        <div className='mt-4'>
+                            <label>Прописка</label>
+                            <Input />
+                        </div>
 
                     </div>
 
